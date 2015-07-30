@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EA3EBD2B-932E-42E1-9914-20C13185EBE2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BoletoBr</RootNamespace>
+    <AssemblyName>BoletoBr</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arquivo\CNAB240\Remessa\DetalheSegmentoPRemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\DetalheSegmentoQRemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\DetalheSegmentoRRemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\DetalheSegmentoSRemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\DetalheSegmentoY08RemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\DetalheSegmentoYRemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\HeaderDeArquivoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\HeaderLoteRemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\LoteRemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\TrailerLoteRemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\DetalheSegmentoY08RetornoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\DetalheSegmentoY50RetornoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\HeaderLoteRetornoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\LoteRetornoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\TrailerLoteRetornoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB400\Remessa\DetalheFrenteRemessaCnab400.cs" />
+    <Compile Include="Arquivo\CNAB400\Retorno\DetalheRateioRetornoCnab400.cs" />
+    <Compile Include="Arquivo\Generico\Retorno\RetornoDetalheGenerico.cs" />
+    <Compile Include="Arquivo\Generico\Retorno\RetornoTrailerGenerico.cs" />
+    <Compile Include="Arquivo\Generico\Retorno\RetornoGenerico.cs" />
+    <Compile Include="Arquivo\Generico\Retorno\RetornoHeaderGenerico.cs" />
+    <Compile Include="Bancos\Brasil\EscritorRemessaCnab400BancoDoBrasil.cs" />
+    <Compile Include="Bancos\BRB\BancoBRB.cs" />
+    <Compile Include="Bancos\BRB\EscritorRemessaCnab400BRB.cs" />
+    <Compile Include="Bancos\BRB\LeitorRetornoCnab400BRB.cs" />
+    <Compile Include="Dominio\InformacoesAdicionais.cs" />
+    <Compile Include="Enums\TipoCobrancaJuro.cs" />
+    <Compile Include="Fabricas\EscritorArquivoRemessaFactory.cs" />
+    <Compile Include="Fabricas\RemessaFactory.cs" />
+    <Compile Include="Interfaces\IArquivoRemessa.cs" />
+    <Compile Include="Arquivo\TipoLinhaArquivoGerado.cs" />
+    <Compile Include="Arquivo\TipoLinhaArquivoLido.cs" />
+    <Compile Include="Bancos\Amazonia\BancoAmazonia.cs" />
+    <Compile Include="Bancos\Bradesco\EscritorRemessaCnab400Bradesco.cs" />
+    <Compile Include="Bancos\Bradesco\LeitorRetornoCnab240Bradesco.cs" />
+    <Compile Include="Bancos\Bradesco\LeitorRetornoCnab400Bradesco.cs" />
+    <Compile Include="Bancos\Brasil\BancoBrasil.cs" />
+    <Compile Include="Bancos\Bradesco\BancoBradesco.cs" />
+    <Compile Include="Bancos\Brasil\LeitorRetornoCnab240BancoDoBrasil.cs" />
+    <Compile Include="Bancos\Brasil\LeitorRetornoCnab400BancoDoBrasil.cs" />
+    <Compile Include="Bancos\Cef\BancoCef.cs" />
+    <Compile Include="Bancos\Cef\EscritorRemessaCnab240CefSicgb.cs" />
+    <Compile Include="Bancos\Cef\LeitorRetornoCnab240Cef.cs" />
+    <Compile Include="Bancos\Cef\LeitorRetornoCnab400Cef.cs" />
+    <Compile Include="Bancos\Hsbc\BancoHsbc.cs" />
+    <Compile Include="Interfaces\IBanco.cs" />
+    <Compile Include="Interfaces\IEscritorArquivoRemessaCnab240.cs" />
+    <Compile Include="Interfaces\IEscritorArquivoRemessaCnab400.cs" />
+    <Compile Include="Interfaces\ILeitorArquivoRetornoCnab240.cs" />
+    <Compile Include="Interfaces\ILeitorArquivoRetornoCnab400.cs" />
+    <Compile Include="Bancos\Itau\BancoItau.cs" />
+    <Compile Include="Bancos\Itau\EscritorRemessaCnab400Itau.cs" />
+    <Compile Include="Bancos\Itau\LeitorRetornoCnab400Itau.cs" />
+    <Compile Include="Bancos\Hsbc\LeitorRetornoCnab400Hsbc.cs" />
+    <Compile Include="Bancos\Santander\BancoSantander.cs" />
+    <Compile Include="Bancos\Santander\EscritorRemessaCnab400Santander.cs" />
+    <Compile Include="Bancos\Santander\LeitorRetornoCnab400Santander.cs" />
+    <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\MetodosExtensao.cs" />
+    <Compile Include="Dominio\Boleto.cs" />
+    <Compile Include="Dominio\CarteiraCobranca.cs" />
+    <Compile Include="Dominio\Cedente.cs" />
+    <Compile Include="Arquivo\CNAB150\RemessaCnab150.cs" />
+    <Compile Include="Arquivo\CNAB400\Retorno\ArquivoRetornoCNAB400.cs" />
+    <Compile Include="Dominio\CodigoLiquidacao\AbstractCodigoLiquidacao.cs" />
+    <Compile Include="Dominio\CodigoLiquidacao\CodigoLiquidacao.cs" />
+    <Compile Include="Dominio\CodigoLiquidacao\CodigoLiquidacaoBancoBrasil.cs" />
+    <Compile Include="Dominio\CodigoLiquidacao\ICodigoLiquidacao.cs" />
+    <Compile Include="Dominio\CodigoOcorrencia.cs" />
+    <Compile Include="Dominio\CodigoRejeicao\BancoBrasil\CodigoRejeicaoBancoBrasil.cs" />
+    <Compile Include="Dominio\CodigoRejeicao\Hsbc\CodigoRejeicaoHsbc.cs" />
+    <Compile Include="Interfaces\ICodigoOcorrencia.cs" />
+    <Compile Include="Dominio\CodigoRejeicao\AbstractCodigoRejeicao.cs" />
+    <Compile Include="Dominio\CodigoRejeicao\CodigoRejeicao.cs" />
+    <Compile Include="Dominio\CodigoRejeicao\ICodigoRejeicao.cs" />
+    <Compile Include="Dominio\CodigoTarifas\AbstractCodigoTarifas.cs" />
+    <Compile Include="Dominio\CodigoTarifas\BancoBrasil\CodigoTarifaBancoBrasil.cs" />
+    <Compile Include="Dominio\CodigoTarifas\CodigoTarifas.cs" />
+    <Compile Include="Dominio\CodigoTarifas\ICodigoTarifas.cs" />
+    <Compile Include="Dominio\ContaBancaria.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\DetalheRemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB400\Remessa\DetalheRemessaCnab400.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\DetalheRetornoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB400\Retorno\DetalheRetornoCnab400.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\DetalheSegmentoERetornoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\DetalheSegmentoTRetornoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\DetalheSegmentoURetornoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\DetalheSegmentoWRetornoCnab240.cs" />
+    <Compile Include="Dominio\Endereco.cs" />
+    <Compile Include="Arquivo\CNAB150\DetalheRemessaCnab150.cs" />
+    <Compile Include="Arquivo\CNAB150\DetalheRetornoCnab150.cs" />
+    <Compile Include="Arquivo\CNAB150\HeaderRemessaCnab150.cs" />
+    <Compile Include="Arquivo\CNAB150\HeaderRetornoCnab150.cs" />
+    <Compile Include="Arquivo\CNAB150\TrailerRemessaCnab150.cs" />
+    <Compile Include="Arquivo\CNAB150\TrailerRetornoCnab150.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\HeaderRemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB400\Remessa\HeaderRemessaCnab400.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\HeaderRetornoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB400\Retorno\HeaderRetornoCnab400.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\RemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB400\Remessa\RemessaCnab400.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\RetornoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB400\Retorno\RetornoCnab400.cs" />
+    <Compile Include="Interfaces\IArquivoRetorno.cs" />
+    <Compile Include="Dominio\EspecieDocumento.cs" />
+    <Compile Include="Interfaces\IEspecieDocumento.cs" />
+    <Compile Include="Interfaces\IInstrucao.cs" />
+    <Compile Include="Dominio\Instrucao\InstrucaoPadronizada.cs" />
+    <Compile Include="Dominio\Instrucao\InstrucaoCustomizada.cs" />
+    <Compile Include="Arquivo\Remessa.cs" />
+    <Compile Include="Dominio\Sacado.cs" />
+    <Compile Include="Arquivo\CNAB240\Remessa\TrailerRemessaCnab240.cs" />
+    <Compile Include="Arquivo\CNAB400\Remessa\TrailerRemessaCnab400.cs" />
+    <Compile Include="Arquivo\CNAB240\Retorno\TrailerRetornoCnab240.cs" />
+    <Compile Include="Arquivo\CNAB400\Retorno\TrailerRetornoCnab400.cs" />
+    <Compile Include="Enums\TipoArquivo.cs" />
+    <Compile Include="Enums\CategoriaLancamento.cs" />
+    <Compile Include="Enums\IsencaoCpmf.cs" />
+    <Compile Include="Enums\TipoComplementoLancamento.cs" />
+    <Compile Include="Enums\EspecieDocumento.cs" />
+    <Compile Include="Enums\TipoInscricao.cs" />
+    <Compile Include="Enums\TipoInstrucao.cs" />
+    <Compile Include="Enums\TipoLancamento.cs" />
+    <Compile Include="Enums\TipoMovimentoArquivo.cs" />
+    <Compile Include="Enums\CodigoOcorrenciaRemessa.cs" />
+    <Compile Include="Enums\CodigoOcorrenciaRetorno.cs" />
+    <Compile Include="Enums\TipoPessoa.cs" />
+    <Compile Include="Exceptions\ValidacaoBoletoException.cs" />
+    <Compile Include="Fabricas\BancoFactory.cs" />
+    <Compile Include="CalculoModulo\CalculadoraMod10Basa.cs" />
+    <Compile Include="CalculoModulo\CalculadoraMod10Generica.cs" />
+    <Compile Include="CalculoModulo\CalculadoraMod11Basa.cs" />
+    <Compile Include="CalculoModulo\CalculadoraMod11Generica.cs" />
+    <Compile Include="CalculoModulo\ICalculadoraModulo10.cs" />
+    <Compile Include="CalculoModulo\ICalculadoraModulo11.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Implementacoes\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
